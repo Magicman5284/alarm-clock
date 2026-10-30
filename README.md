@@ -1,0 +1,62 @@
+Welcome to my alarm clock!
+
+This project is an alarm clock that runs on an ESP32 and is controlled using an apple shortcut
+The shortcut can be found here: https://www.icloud.com/shortcuts/9c18b0a72f074b27aea9341c8937683c
+
+Features:
+Set alarm
+Set repeating alarm
+View alarm list
+cancel alarm
+stopwatch
+timer
+cancel alarm
+
+About the design:
+The PCB has a bunch of little bits of text and images over because I decided to customize it
+This is the third PCB I've made, and it's the first one I went all out on decorating. 
+Look around for some of the easter eggs!
+
+Use:
+Useage is pretty simple, just run the short cut and it gives you prompts from there. 
+your phone needs to be on the same wifi network in order to connect
+Pressing the button does different thing depending on what mode the cock is in
+When pressing it when the clock is at idle, it will display the next alarm. 
+When pressing it while a stop watch is running it will stop the stopwatch
+When pressing it while a timer is running it will stop the timer. 
+And obviously when pressing it while an alarm is going off it will stop the alarm. 
+
+Assembly:
+before uploading code, make sure to input your wifi details into the software
+put all components except for the switch on the side with the dog
+put the switch on the other side
+I'm not gonna bother explaining how to solder
+next, put the screen in the screen hole of the housing
+put the speaker in the speaker hole of the housing
+Put the PCB in the housing, making sure to align the port on the ESP32 with the hole
+put the lid on 
+put the keycap on the switch
+power it using the port on the esp32
+
+BOM: 
+| Item                     | Qty | Supplier   | Cost/item | Total Cost | link                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|--------------------------|-----|------------|-----------|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PCB                      | 1   | JLCPCB     | $11.75    | $11.75     | https://cart.jlcpcb.com/shopcart/cart/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ESP32 Devkit 32e         | 1   | Aliexpress | $4.89     | $4.89      | https://www.aliexpress.us/item/3256806702153769.html?spm=a2g0o.productlist.main.18.67585c09bSFoCP&algo_pvid=f1ce53f9-d5df-4b3a-970c-3f98776b2e6a&algo_exp_id=f1ce53f9-d5df-4b3a-970c-3f98776b2e6a-17&pdp_ext_f=%7B%22order%22%3A%22350%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%213.09%213.09%21%21%213.09%213.09%21%40210311c217933246971303026e0ffa%2112000038626150028%21sea%21US%212783459362%21X%211%210%21n_tag%3A-29919%3Bd%3Abaf43391%3Bm03_new_user%3A-29895&curPageLogUid=7mRbqkwcirtO&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005006888468521%7C_p_origin_prod%3A                             |
+| dfplayermini             | 1   | Aliexpress | $0.99     | $0.99      | https://www.aliexpress.us/w/wholesale-dfplayermi.html?spm=a2g0o.cart.search.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| 4 ohm 3 watt speaker     | 1   | Aliexpress | $1.55     | $1.55      | https://www.aliexpress.us/item/3256808440309449.html?spm=a2g0o.productlist.main.26.3e115336ekZqeb&algo_pvid=ed21cef5-22ef-4ecc-961e-e51a669bdb40&algo_exp_id=ed21cef5-22ef-4ecc-961e-e51a669bdb40-25&pdp_ext_f=%7B%22order%22%3A%225833%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%215.25%214.25%21%21%215.25%214.25%21%402101e81117933248692643231e0f08%2112000046009599177%21sea%21US%212783459362%21X%211%210%21n_tag%3A-29919%3Bd%3Abaf43391%3Bm03_new_user%3A-29895%3BpisId%3A5000000219603055&curPageLogUid=h7SvuAxJD4rP&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005008626624201%7C_p_origin_prod%3A |
+| cherry mx switch         | 1   | Aliexpress | $2.27     | $2.27      | https://www.aliexpress.us/item/3256801976570526.html?spm=a2g0o.productlist.main.5.688744ccV9ucZ5&algo_pvid=7ed89fed-d3cb-4a07-b618-00326d9a45f0&algo_exp_id=7ed89fed-d3cb-4a07-b618-00326d9a45f0-4&pdp_ext_f=%7B%22order%22%3A%2292%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%212.27%212.27%21%21%212.27%212.27%21%402103274a17933249592103766e0baa%2112000018919108208%21sea%21US%212783459362%21X%211%210%21n_tag%3A-29919%3Bd%3Abaf43391%3Bm03_new_user%3A-29895&curPageLogUid=fu1PsmRXaU1L&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005002162885278%7C_p_origin_prod%3A                                |
+| 1x2 dupont connector     | 1   | Aliexpress | $1.60     | $1.60      | https://www.aliexpress.us/item/3256811876826434.html?spm=a2g0o.productlist.main.25.623949597420vA&algo_pvid=894fe34e-67f8-4acd-bffa-2217c9a293bd&algo_exp_id=894fe34e-67f8-4acd-bffa-2217c9a293bd-22&pdp_ext_f=%7B%22order%22%3A%22579%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%212.60%211.60%21%21%212.60%211.60%21%402101e5ab17933250643156929e0eb4%2112000057466932456%21sea%21US%212783459362%21X%211%210%21n_tag%3A-29919%3Bd%3Abaf43391%3Bm03_new_user%3A-29895%3BpisId%3A5000000219603055&curPageLogUid=lbAIQ25zZsG3&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005012063141186%7C_p_origin_prod%3A  |
+| 1x4 dupont connector     | 1   | Aliexpress | $1.85     | $1.85      | https://www.aliexpress.us/item/3256811876826434.html?spm=a2g0o.productlist.main.25.623949597420vA&algo_pvid=894fe34e-67f8-4acd-bffa-2217c9a293bd&algo_exp_id=894fe34e-67f8-4acd-bffa-2217c9a293bd-22&pdp_ext_f=%7B%22order%22%3A%22579%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%212.60%211.60%21%21%212.60%211.60%21%402101e5ab17933250643156929e0eb4%2112000057466932456%21sea%21US%212783459362%21X%211%210%21n_tag%3A-29919%3Bd%3Abaf43391%3Bm03_new_user%3A-29895%3BpisId%3A5000000219603055&curPageLogUid=lbAIQ25zZsG3&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005012063141186%7C_p_origin_prod%3A  |
+| 1k resistor              | 1   | Aliexpress | $0.99     | $0.99      | https://www.aliexpress.us/item/2251832129610568.html?spm=a2g0o.productlist.main.1.25326d60rdNL8u&algo_pvid=edfc57ec-6b59-4211-b7e8-f2a065aece70&algo_exp_id=edfc57ec-6b59-4211-b7e8-f2a065aece70-0&pdp_ext_f=%7B%22order%22%3A%22717%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%211.47%210.99%21%21%211.47%210.99%21%402103094f17933252044222206e0fe1%2158254850883%21sea%21US%212783459362%21X%211%210%21n_tag%3A-29919%3Bd%3Abaf43391%3Bm03_new_user%3A-29895%3BpisId%3A5000000219603055&curPageLogUid=x9bjduV6E75j&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A32315925320%7C_p_origin_prod%3A               |
+| 2.75u keycap             | 1   | Aliexpress | $5.95     | $5.95      | https://www.aliexpress.us/item/3256807398966945.html?spm=a2g0o.productlist.main.2.5a3e4688DaLE72&algo_pvid=579fe484-0437-467e-8f6a-9ced1f6fc345&algo_exp_id=579fe484-0437-467e-8f6a-9ced1f6fc345-1&pdp_ext_f=%7B%22order%22%3A%22775%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%215.95%215.95%21%21%2139.43%2139.43%21%402103094f17933252657634725e0fe1%2112000041398778703%21sea%21US%212783459362%21X%211%210%21n_tag%3A-29919%3Bd%3Abaf43391%3Bm03_new_user%3A-29895&curPageLogUid=ulMywThyTcc5&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005007585281697%7C_p_origin_prod%3A                             |
+| MicroSD card             | 1   | Aliexpress | $4.69     | $4.69      | https://www.aliexpress.us/item/3256811941680244.html?spm=a2g0o.productlist.main.8.60f66b2efRxJoC&algo_pvid=11c2aabe-f7a2-40ce-a041-4d8680cf8152&algo_exp_id=11c2aabe-f7a2-40ce-a041-4d8680cf8152-7&pdp_ext_f=%7B%22order%22%3A%22122%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%214.75%214.65%21%21%2131.48%2130.82%21%40210328df17933253806557798e0f2b%2112000057588136790%21sea%21US%212783459362%21X%211%210%21n_tag%3A-29919%3Bd%3Abaf43391%3Bm03_new_user%3A-29895&curPageLogUid=MspO1k5kvHQz&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005012127994996%7C_p_origin_prod%3A                             |
+| TM1637 display           | 1   | Aliexpress | $1.51     | $1.51      | https://www.aliexpress.us/item/3256802087257562.html?spm=a2g0o.productlist.main.13.6d5a753f3vqx8d&algo_pvid=2fb0a497-69e9-4dab-829a-9f21d02ad9ce&algo_exp_id=2fb0a497-69e9-4dab-829a-9f21d02ad9ce-12&pdp_ext_f=%7B%22order%22%3A%2234%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%211.51%211.51%21%21%211.51%211.51%21%40210327ef17933255281251190e0cd9%2112000019863214642%21sea%21US%212783459362%21X%211%210%21n_tag%3A-29919%3Bd%3Abaf43391%3Bm03_new_user%3A-29895&curPageLogUid=QMSImAcfJLqn&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005002273572314%7C_p_origin_prod%3A                              |
+| Estimated total shipping | 1   |            |           | $0.00      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+
+Images: 
+<img width="1841" height="886" alt="Screenshot 2026-10-29 122651" src="https://github.com/user-attachments/assets/33e3759c-8c06-4d7d-94dc-ce59da358221" />
+<img width="1255" height="902" alt="Screenshot 2026-10-28 214744" src="https://github.com/user-attachments/assets/b111c92f-dcbe-4218-9d19-c752c870dd1d" />
+<img width="886" height="582" alt="Screenshot 2026-10-28 214729" src="https://github.com/user-attachments/assets/c766f42e-9c11-406c-9395-264688dfa03e" />
+<img width="1420" height="881" alt="Screenshot 2026-10-28 214716" src="https://github.com/user-attachments/assets/ba843120-6299-43ac-9eb1-e839c2b68587" />
+<img width="1357" height="922" alt="Screenshot 2026-10-29 221443" src="https://github.com/user-attachments/assets/b27c3712-1c21-4667-81ee-f77fdccf61b9" />
